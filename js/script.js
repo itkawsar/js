@@ -1,3 +1,67 @@
+$(document).ready(function() {
+
+
+    $("#btn1").click(function() {
+        $("#div1").hide(1000);
+        // $("#div1").hide(1000).show(1000);
+    })
+
+    $("#btn2").click(function() {
+        $("#div1").show(1000);
+    })
+    $("#btn3").click(function() {
+        $("#div1").toggle(1000);
+    })
+    $("#btn4").click(function() {
+        $("#div1").fadeOut(1000);
+        //$("#div1").fadeOut(1000).fadeIn(1000);
+    })
+    $("#btn5").click(function() {
+        $("#div1").fadeIn(1000);
+    })
+    $("#btn6").click(function() {
+        $("#div1").fadeToggle(1000);
+    })
+    $("#btn7").click(function() {
+        $("#div1").fadeTo(1000, 0.5);
+    })
+    $("#btn8").click(function() {
+        $("#div1").slideUp(1000);
+    })
+    $("#btn9").click(function() {
+        $("#div1").slideDown(1000);
+    })
+    $("#btn10").click(function() {
+        $("#div1").slideToggle(1000);
+    })
+    $("#btn11").click(function() {
+        $("#div1").animate({
+            width: "900px",
+            height: "400px",
+            opacity: 0.7,
+
+        }, 1000);
+    })
+    $("#btn12").click(function() {
+        $("#div1").animate({
+            width: "800px",
+            height: "200px",
+            opacity: 1,
+
+        }, 1000);
+    })
+
+
+
+
+
+
+
+
+
+
+});
+
 //document.write("<h1> Hello Bangladesh </h1>");
 /*
 var x = 35;
@@ -609,8 +673,7 @@ var element;
 
 element = document.getElementById("my-profile").innerHTML;
 
-console.log(element);
-*/
+
 document.write("<h2>Assignment Operator</h2>");
 var a = 10;
 var b = 3;
@@ -641,15 +704,17 @@ for (var z = 1; z <= 20; z++) {
 document.write("<br>");
 
 
-function g_option(selector, minvalue, maxvalue) {
+function g_option(selector, maxvalue, minvalue) {
     var jsSelector = document.getElementById(selector);
-    for (var s = minvalue; s <= maxvalue; s++) {
+    for (var s = maxvalue; s >= minvalue; s--) {
         var option = document.createElement("option");
         var optiontext = document.createTextNode(s);
         option.appendChild(optiontext);
         jsSelector.appendChild(option);
     }
 }
-g_option('year', 1950, 2022);
-g_option('month', 1, 12);
-g_option('day', 1, 31);
+g_option('year', 2000, 1950);
+g_option('month', 12, 1);
+g_option('day', 31, 1);
+console.log(element);
+*/
